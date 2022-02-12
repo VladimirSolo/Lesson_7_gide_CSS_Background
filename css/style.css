@@ -1,0 +1,243 @@
+/* &display=swap */
+@import "null.css";
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,700,900&display=swap);
+/* ================================================================ */
+
+body {
+	font-family: "Roboto", sans-serif;
+	max-width: 1440px;
+	/* padding: 30px; */
+	margin: 0 auto;
+	font-size: 24px;
+	background: url("../img/bg-1.jpg");
+}
+.wrapper {
+	min-height: 100%;
+	/* overflow: hidden; */
+	padding: 20px;
+	background:url("../img/bg-4.jpg");
+}
+h1 {
+	font-weight: bold;
+	font-size: 32px;
+	text-transform: uppercase;
+	text-align: center;
+}
+h2 {
+	margin: 10px 0;
+	font-weight: bold;
+}
+p {
+	text-align: justify;
+	text-indent: 20px;
+}
+a {
+	color: blue;
+}
+.block {
+	height: 300px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px  black;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.list-2 li {
+	margin-top: 15px;
+	background: url("../img/arrow_forward_next_right_icon.svg") 0 0 / auto no-repeat;
+	padding: 0 0 0 30px;
+}
+.list li {
+	margin-top: 15px;
+	background: url("../img/check_sign_icon.svg") 0 0 / auto no-repeat;;
+	padding: 0 0 0 30px;
+}
+.bg-color {
+	padding: 20px 20px 0px 20px;
+	border: 5px solid  black;
+	margin: 20px 0;
+}
+.b-1 {
+	background-color: rgb(24, 61, 181);
+}
+.b-2 {
+	background-color: rgba(24, 61, 181, 0.5);
+}
+.b-3 {
+	background-image: url(../img/mini.jpg);
+}
+.b-4 {
+/* Old browsers */
+background-color: rgb(238, 215, 12);
+/* FF3.6-15 */
+background-image: -moz-linear-gradient(top,  rgba(238, 215, 12, 1) 0%, rgba(245, 16, 226, 1) 50%, rgba(24, 61, 181,1) 100%);
+/* Chrome10-25,Safari5.1-6 */
+background-image: -webkit-linear-gradient(top,  rgba(238, 215, 12, 1) 0%, rgba(245, 16, 226, 1) 50%, rgba(24, 61, 181,1) 100%);;
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background-image: linear-gradient(to bottom, rgba(238, 215, 12, 1) 0%, rgba(245, 16, 226, 1) 50%, rgba(24, 61, 181,1) 100%);
+}
+.b-5 {
+/* Old browsers */
+background-color: rgb(238, 215, 12);
+/* FF3.6-15 */
+background-image: -moz-radial-gradient(center, ellipse cover, rgba(238, 215, 12, 1) 0%, rgba(245, 16, 226, 1) 50%, rgba(24, 61, 181,1) 100%);
+/* Chrome10-25,Safari5.1-6 */
+background-image: -webkit-radial-gradient(center, ellipse cover, rgba(238, 215, 12, 1) 0%, rgba(245, 16, 226, 1) 50%, rgba(24, 61, 181,1) 100%);
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background-image: radial-gradient(center, ellipse cover, rgba(238, 215, 12, 1) 0%, rgba(245, 16, 226, 1) 50%, rgba(24, 61, 181,1) 100%);
+}
+.b-6 {
+	background: url('../img/js-mini.jpg') repeat;
+	/* background-image: url('img/background/avatar.jpg');
+	background-repeat: repeat; */
+}
+.b-7 {
+	background: url('../img/js-mini.jpg') no-repeat;
+
+}
+.b-8 {
+	background: url('../img/js-mini.jpg') repeat-x;
+}
+.b-9 {
+	background: url('../img/js-mini.jpg') repeat-y;
+
+}
+.b-10 {
+	background: url('../img/js-mini.jpg') space;
+}
+.b-11 {
+	background: url('../img/js-mini.jpg') round;
+}
+.b-12 {
+	background: url('../img/html.png') 0 0 no-repeat;
+}
+.b-13 {
+	background: url('../img/html.png') 50% no-repeat;
+}
+.b-14 {
+	background: url('../img/html.png') 0 50% no-repeat;
+}
+.b-15 {
+	background: url('../img/html.png') 100% 100% no-repeat;
+}
+.b-16 {
+	background: url('../img/html.png') 55px 77px no-repeat;
+}
+.b-17 {
+	background: url('../img/background.jpg') 0 0 no-repeat scroll;
+}
+.b-18 {
+	background: url('../img/background.jpg') 0 0 no-repeat fixed;
+}
+.b-19 {
+	background: url('../img/background.jpg') 0 0 no-repeat local;
+	overflow: auto;
+}
+.font {
+	color: #fff;
+}
+.b-20 {
+	background: url('../img/background2.jpg') 0 0/auto auto no-repeat;
+}
+.b-21 {
+	background: url('../img/background2.jpg') 0 0/100% auto no-repeat;
+}
+.b-22 {
+	background: url('../img/background2.jpg') 0 0/auto 100% no-repeat;
+}
+.b-23 {
+	background: url('../img/background2.jpg') 0 0/100% 100% no-repeat;
+}
+.b-24 {
+	background: url('../img/background2.jpg') 0 0/contain no-repeat;
+}
+.b-25 {
+	background: url('../img/background2.jpg') 0 0/cover no-repeat;
+}
+.b-26 {
+	background: url('../img/background2.jpg') 0 0/200px 150px no-repeat;
+}
+.b-27 {
+	background: #183db5 url('../img/js-mini.jpg') no-repeat;
+}
+.b-28 {
+	background: url('../img/js-mini.jpg') left no-repeat, url('../img/background.jpg') 50%/cover no-repeat;
+}
+.b-29 {
+	background: url('../img/mini.jpg') right/50px no-repeat, url('../img/js-mini.jpg') left no-repeat, url('../img/background.jpg') 50%/cover no-repeat;
+}
+.b-30 {
+	background: url('../img/js-mini.jpg') 0 0/50px no-repeat, url('../img/mini.jpg') 100% 100%/50px no-repeat, url('../img/js-mini.jpg') 50% no-repeat, url('../img/background.jpg') 50%/cover no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.block1 {
+	/* Цвет фона */
+	background-color: red;
+	/* Установка фонового изображения */
+	background-image: url("../img/ava.png");
+	/* Установка цветового градиента */
+	/* background-image: linear-gradient(to bottom, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164, 1) 100%); */
+	/* Управление повторением изображения */
+	background-repeat: no-repeat;
+	/* Позиция изображения */
+	background-position: 0 0;
+	/* Размер изображения */
+	background-size: auto;
+	/* Фиксация изображения */
+	background-attachment: scroll;
+
+	/* Универсальное свойство */
+	/* background: red url("../img/ava.png") 0 0 / cover no-repeat; */
+
+	/* background: цвет картина или градиент позиция / размер повторение фиксация */
+}
+
+
+.item-list {
+	background: url("../img/list.svg") 0 0 / auto no-repeat;
+	padding: 0px 0px 0px 25px;
+	margin: 0px 0px 5px 0px;
+	/* text-indent: 25px; */
+}
+
+.sub-list {
+	margin: 10px 0;
+}
+.item-sub-list {
+	background: url("../img/ava.png") 0 0 / 15px no-repeat;
+	padding: 0px 0px 0px 25px;
+	margin: 0px 0px 5px 0px;
+}
+
+.some-block {
+	background: linear-gradient(180deg, rgba(131, 58, 180, 0) 0%, rgba(255, 255, 255, 1) 100%), url("../img/01.png") center / cover no-repeat;
+}

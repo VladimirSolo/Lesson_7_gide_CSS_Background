@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 7 - Курс Зима 2022</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>CSS свойство background</h1>
+		</header>
+		<main>
+			<h2>Background. Управляет фоном элемента.</h2>
+			<p>Универсальное свойство background позволяет установить одновременно до пяти характеристик фона. Значения могут
+				идти в любом порядке, браузер сам определит, какое из них соответствует нужному свойству. Для подробного
+				ознакомления смотрите информацию о каждом свойстве отдельно. В CSS3 допустимо указывать параметры сразу
+				нескольких фонов, перечисляя их через запятую..</p>
+			<h2>Background-color</h2>
+			<p>Определяет цвет фона элемента. Хотя это свойство не наследует свойства своего родителя, из-за того, что
+				начальное значение устанавливается прозрачным, цвет фона дочерних элементов совпадает с цветом фона
+				родительского элемента.</p>
+			<ul class="list">
+				<li><strong>background: transparent</strong> (по умолчанию, прозрачный)</li>
+				<li><strong>background-color: rgb(24, 61, 181)</strong> (Цветной (RGB)) см. 1</li>
+				<li><strong>background-color: rgba(24, 61, 181, 0.5)</strong> (Цветной (RGBA)) см. 2</li>
+			</ul>
+			<div class="bg-color">
+				<div class="block b-1">1</div>
+				<div class="block b-2">2</div>
+				<!-- <div class="block b-3">3</div> -->
+			</div>
+			<h2>Background-image</h2>
+			<p>Устанавливает фоновое изображение для элемента. Если одновременно для элемента задан цвет фона, он будет
+				показан, пока фоновая картинка не загрузится полностью. То же произойдет, если изображения не доступны или их
+				показ в браузере отключен. В случае наличия в рисунке прозрачных областей, через них будет проглядывать фоновый
+				цвет. В CSS3 допустимо указывать несколько фоновых изображений, перечисляя их параметры через запятую.</p>
+			<h2>Линейный градиент</h2>
+			<p>Градиентом называют плавный переход от одного цвета к другому, причём самих цветов и переходов между ними может
+				быть несколько. С помощью градиентов создаются самые причудливые эффекты веб-дизайна, например,
+				псевдотрёхмерность, блики, фон и др. Также с градиентом элементы смотрятся более симпатично, чем однотонные.
+				Отдельного свойства для добавления градиента нет, поскольку он считается фоновым изображением, поэтому
+				добавляется через свойство background-image или универсальное свойство background, как показано в примере 2.</p>
+			<h2>Радиальный градиент</h2>
+			<p>Радиальный градиент создаётся с помощью свойства background или background-image с параметром radial-gradient.
+				В простейшем случае для задания радиального градиента понадобится всего два параметра: начальный и конечный
+				цвет. По умолчанию, начальная точка располагается при этом в центре.</p>
+			<p>Возможны две формы радиального градиента — круг (circle) и эллипс (ellipse), которые различаются своим видом.
+				По умолчанию устанавливается эллиптический градиент.</p>
+			<p>Градиенты достаточно популярны среди веб-дизайнеров, но их добавление усложняется разными свойствами под каждый
+				браузер и указанием множества цветов. Чтобы вам было проще создавать градиенты и вставлять их в код, рекомендую
+				сайт <a target="blanck"
+					href="https://www.colorzilla.com/gradient-editor/">www.colorzilla.com/gradient-editor</a> с помощью которого
+				легко настроить градиенты и сразу получить нужный код.</p>
+			<ul class="list">
+				<li><strong>background-image: url(../img/mini.jpg);</strong>(см.1)
+				<li>
+				<li><strong>
+						background-image: linear-gradient(to bottom, rgba(238, 215, 12, 1) 0%, rgba(245, 16, 226, 1) 50%, rgba(24,
+						61, 181,1) 100%)</strong> (W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+) (см. 3)</li>
+				<li><strong>background-image: radial-gradient(center, ellipse cover, rgba(238, 215, 12, 1) 0%, rgba(245, 16,
+						226, 1) 50%, rgba(24, 61, 181,1) 100%)</strong>(W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+) (см. 3)
+				</li>
+			</ul>
+			<div class="bg-color">
+				<div class="block b-3">1</div>
+				<div class="block b-4">2</div>
+				<div class="block b-5">3</div>
+			</div>
+			<h2>Background-repeat</h2>
+			<p>Определяет, как будет повторяться фоновое изображение, установленное с помощью свойства background-image. Можно
+				установить повторение рисунка только по горизонтали, по вертикали или в обе стороны. В CSS3 допустимо указывать
+				несколько значений для каждого фона, перечисляя значения через запятую.</p>
+			<h2>Вариант написания CSS кода:</h2>
+			<p>background-image: url('img/background/.jpg');
+				background-repeat: repeat; Ниже универсальный вариант.</p>
+			<ul class="list">
+				<li><strong>background: url('../img/js-mini.jpg') repeat;</strong> Фоновое изображение повторяется по
+					горизонтали и вертикали (по умолчанию). см. 1</li>
+				<li><strong>background: url('../img/js-mini.jpg') no-repeat;</strong> Устанавливает одно фоновое изображение в
+					элементе без его повторений см. 2</li>
+				<li><strong>background: url('../img/js-mini.jpg') repeat-x;
+					</strong>Фоновый рисунок повторяется только по горизонтали. см. 3</li>
+				<li><strong>background: url('../img/js-mini.jpg') repeat-y;</strong> Фоновый рисунок повторяется только по
+					вертикали. см. 4</li>
+				<li><strong> background: url('../img/js-mini.jpg') round;
+					</strong>Изображение повторяется так, чтобы в области поместилось целое число рисунков; если это не удаётся
+					сделать, то фоновые рисунки масштабируются. см. 6</li>
+			</ul>
+			<div class="bg-color">
+				<div class="block b-6">1</div>
+				<div class="block b-7">2</div>
+				<div class="block b-8">3</div>
+				<div class="block b-9">4</div>
+				<div class="block b-10">5</div>
+				<div class="block b-11">6</div>
+			</div>
+			<h2>Background-position</h2>
+			<p>Задает начальное положение фонового изображения. У свойства background-position два значения, положение по
+				горизонтали (может быть — left, center, right) и вертикали (может быть — top, center, bottom). Кроме
+				использования ключевых слов положение также можно задавать в процентах, пикселах или других единицах. Если
+				применяются ключевые слова, то порядок их следования не имеет значения, при процентной записи вначале задается
+				положение рисунка по горизонтали, а затем, через пробел, положение по вертикали. Отношение между используемыми
+				ключевыми словами и процентной записью следующее.</p>
+			<ul class="list-2">
+				<li>top left = left top = 0% 0% (в левом верхнем углу)</li>
+				<li>top = top center = center top = 50% 0% (по центру вверху)</li>
+				<li>right top = top right = 100% 0% (в правом верхнем углу)</li>
+				<li>left = left center = center left = 0% 50% (по левому краю и по центру)</li>
+				<li>center = center center = 50% 50% (по центру)</li>
+				<li>right = right center = center right = 100% 50% (по правому краю и по центру)</li>
+				<li>bottom left = left bottom = 0% 100% (в левом нижнем углу)</li>
+				<li>bottom = bottom center = center bottom = 50% 100% (по центру внизу)</li>
+				<li>bottom right = right bottom = 100% 100% (в правом нижнем углу)</li>
+			</ul>
+			<p>В скобках указано, где располагается фоновый рисунок относительно контейнера.</p>
+			<h2>Вариант написания CSS кода:</h2>
+			<p>background-image: url('img/background/.jpg');
+				background-repeat: no-repeat;
+				background-position: 0 0; Ниже универсальный вариант.</p>
+			<ul class="list">
+				<li><strong> background: url('../img/html.png') 0 0 no-repeat;</strong> Фоновое изображение в левом верхнем углу
+					(по умолчанию). см. 1</li>
+				<li><strong>background: url('../img/html.png') 50% no-repeat;</strong> Фоновое изображение по центру. см. 2</li>
+				<li><strong>background: url('../img/html.png') 0 50% no-repeat;
+					</strong>Фоновое изображение слева. см. 3</li>
+				<li><strong>background: url('../img/html.png') 100% 100% no-repeat;</strong> Фоновое изображение в нижнем правом
+					углу. см. 4</li>
+				<li><strong>background: url('../img/html.png') 55px 77px no-repeat;</strong>Задали конкретную позицию см. 5</li>
+			</ul>
+			<div class="bg-color">
+				<div class="block b-12">1</div>
+				<div class="block b-13">2</div>
+				<div class="block b-14">3</div>
+				<div class="block b-15">4</div>
+				<div class="block b-16">5</div>
+			</div>
+			<h2>Background-attachment</h2>
+			<p>Устанавливает, будет ли прокручиваться фоновое изображение вместе с содержимым элемента. Изображение может быть
+				зафиксировано и оставаться неподвижным, либо перемещаться совместно с документом. В CSS3 можно указать несколько
+				значений для ряда фоновых изображений, перечисляя значения через запятую.</p>
+			<h2>Вариант написания CSS кода:</h2>
+			<p>background-image: url('img/background/bg.jpg');
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				background-attachment: scroll; Ниже универсальный вариант.</p>
+			<ul class="list">
+				<li><strong> background: url('../img/html-css-javascript-bg.jpg') 0 0 no-repeat scroll;</strong> Позволяет
+					перемещаться фону вместе с содержимым (по умолчанию). см. 1</li>
+				<li><strong>background: url('../img/html-css-javascript-bg.jpg') 0 0 no-repeat fixed;</strong> Делает фоновое
+					изображение элемента неподвижным, а так же устанавливает фоновое изображение относительно окна браузера. см. 2
+				</li>
+				<li><strong>background: url('../img/html-css-javascript-bg.jpg') 0 0 no-repeat local;
+					</strong> Фон фиксируется с учётом поведения элемента. Если элемент имеет прокрутку, то фон будет
+					прокручиваться вместе с содержимым, но фон выходящий за рамки элемента остаётся на месте. см. 3</li>
+			</ul>
+			<div class="bg-color">
+				<div class="block b-17">1</div>
+				<div class="block b-18">2</div>
+				<div class="block b-19">3
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni debitis dolore qui modi tempora
+						dignissimos ex saepe, exercitationem culpa iusto vero ullam ab, ipsam veritatis. Ipsum, mollitia cumque vel
+						numquam hic eveniet doloremque possimus, nesciunt facere aliquam consectetur iure quidem nihil animi minus
+						reiciendis quas consequuntur dignissimos, officia quis sapiente expedita ex tempora? Ut rerum debitis nemo
+						odio enim cupiditate sed fugiat iusto. Nobis provident animi labore hic enim debitis assumenda delectus
+						veritatis ad quasi, culpa, fugiat cum iure perferendis est velit doloremque. Porro ullam cumque blanditiis
+						odio laboriosam rerum maxime, tempore eaque amet accusantium incidunt. Perspiciatis nihil quibusdam saepe
+						delectus quo, vel, voluptate fugiat doloremque quos tempore, optio neque? Natus quaerat temporibus adipisci
+						id tempora, reiciendis incidunt dicta. Nostrum incidunt provident laborum illo ratione. Totam quibusdam
+						fugit accusamus odio sunt laboriosam. Similique, sit amet! Ipsa voluptatem vel sed quia hic earum rerum
+						vitae soluta, ipsum molestias fugiat inventore reiciendis dolore id porro qui temporibus totam eaque aperiam
+						asperiores repellendus vero accusamus architecto nulla. Totam porro id rem, culpa quibusdam quidem eaque
+						debitis provident possimus ratione amet cupiditate cumque fuga aspernatur, sequi assumenda veniam corrupti
+						exercitationem delectus. Facilis incidunt eius quam voluptatibus nihil voluptatem eligendi magni amet
+						corrupti dolore aliquam quidem, iste dolor ducimus debitis, qui nam. A, asperiores earum ex exercitationem
+						officia, pariatur numquam dolor placeat, deserunt repellendus quasi dolorum dolores perferendis quam?
+						Dignissimos ab porro veniam expedita pariatur praesentium ad quia deleniti placeat magnam libero itaque
+						possimus sed ipsa omnis vero corporis, mollitia, labore provident quisquam autem quas officiis consequatur.
+						Nobis magni eum officia repellendus iste explicabo eius eos voluptate. Quam, ducimus repudiandae ab, unde
+						delectus velit incidunt aliquid assumenda voluptas rerum tenetur, numquam laborum esse. Cum magnam sequi
+						quisquam odio rem in nobis aperiam quod adipisci, officiis eveniet nihil ex explicabo hic. Laudantium
+						voluptatem illum quidem quasi neque, soluta debitis iusto quibusdam cum quod tenetur harum nostrum atque eos
+						doloremque quis? Autem officia iste necessitatibus at illum voluptates eius nihil facilis provident nulla,
+						totam, harum mollitia natus numquam beatae dolore quam voluptate nisi perspiciatis, cupiditate unde cum
+						ipsam facere? Quo quae voluptatibus distinctio non, corrupti, alias animi libero quam dolor modi soluta
+						aspernatur molestiae minus, sequi tempora velit. Quaerat nostrum officiis libero mollitia, ut ipsum facilis
+						in dignissimos animi cupiditate magni a sapiente officia quisquam possimus placeat ducimus labore dolor
+						velit minus quas. Tempora libero dolorum dicta, harum quibusdam placeat possimus eveniet similique labore
+						eum! Asperiores dolore laborum, officiis molestiae architecto pariatur suscipit iure placeat ad
+						exercitationem quos maiores ipsa esse alias, voluptas assumenda nulla est. Quibusdam corporis recusandae
+						labore nulla necessitatibus, quaerat quod temporibus itaque id repellat reprehenderit tempore sit nisi
+						nostrum illum quo esse. Cupiditate quidem animi omnis ea placeat provident minima, quaerat necessitatibus
+						cumque minus. Porro provident iusto deleniti sed quisquam reprehenderit explicabo quia perspiciatis
+						consequatur culpa illo quidem tempore, fuga voluptatibus animi quod dolorem architecto. Consequatur
+						blanditiis molestiae officiis dolorum corrupti totam alias doloremque dolorem, fugiat odio saepe perferendis
+						qui, cumque cum unde? Natus nam adipisci dolor similique consequuntur esse delectus iure ea praesentium
+						animi autem alias fugit ab reiciendis, minima sit magnam quos unde. Optio ab eum at, fuga, impedit unde
+						doloribus praesentium quo quos obcaecati sed placeat ex tempore deleniti repudiandae eos nostrum explicabo
+						voluptates harum cumque. In, nulla sapiente! Fugiat, voluptates aperiam quam cum velit iusto eos, deserunt
+						iste saepe dolores ipsum, quia maiores eum suscipit? Reprehenderit officia natus blanditiis molestiae
+						possimus necessitatibus quia consequatur distinctio, veritatis fugiat accusamus, explicabo dolore odio error
+						nobis sequi veniam cumque recusandae pariatur? Beatae labore consequuntur architecto, ducimus qui voluptas
+						optio. Quibusdam deleniti, eligendi amet iure quo veniam ipsam perspiciatis esse error, id atque veritatis
+						necessitatibus eius nemo culpa dolor voluptatum minus aspernatur dolorum ullam optio! Libero animi vel sint
+						corrupti aut veritatis consequuntur ducimus eligendi temporibus molestias consectetur esse, assumenda eum
+						deleniti veniam eius cum rerum impedit aspernatur sunt odit atque amet iste. Atque, deleniti accusamus? Iure
+						facilis, vero est ipsa nobis doloribus voluptate sunt rerum, laboriosam ad ipsam recusandae. Debitis fugiat
+						cumque explicabo voluptatem, deleniti sed eveniet. Eveniet assumenda culpa ex, doloremque, pariatur tenetur
+						similique ad ipsam itaque, voluptates earum unde consequatur neque animi nemo quos quod harum nihil quia
+						quisquam. Facilis, fugiat consectetur. Soluta voluptate alias pariatur excepturi id saepe dignissimos animi
+						error dolores at enim fugiat quidem corporis consequuntur ducimus culpa quos hic quisquam mollitia odit
+						assumenda ipsum, quod harum doloremque! Dolores natus, sed rem perspiciatis ex fugiat, incidunt explicabo
+						voluptas quae odio debitis veritatis tenetur amet? Reprehenderit, deserunt cupiditate. Eum, beatae quo fuga
+						architecto sequi nam ex exercitationem incidunt hic, dignissimos quis facilis temporibus doloribus maiores.
+						Omnis nihil quas expedita obcaecati est exercitationem possimus, recusandae architecto minus laudantium
+						dolorum in tempore? Commodi minus exercitationem vel pariatur porro. Iusto illo doloribus blanditiis itaque
+						magnam cumque architecto provident et officia quae quidem, commodi magni veritatis, consequuntur hic iure,
+						quo omnis!</p>
+				</div>
+			</div>
+			<h2>Background-size</h2>
+			<p>Масштабирует фоновое изображение согласно заданным размерам. В цифрах, где первое значение (проценты, px)
+				определяет ширину, второе - высоту. Либо специальным значением.</p>
+			<h2>Вариант написания CSS кода:</h2>
+			<p>background-image: url('img/background/bg.jpg');
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				background-size: auto auto; Ниже универсальный вариант.</p>
+			<ul class="list">
+				<li><strong>background: url('img/background/bg.jpg') 0 0/auto auto no-repeat;</strong> Размеры картинки по
+					умолчанию. см. 1</li>
+				<li><strong>background: url('../img/background2.jpg') 0 0/100% auto no-repeat;</strong> Размеры картинки по
+					ширине блока. см. 2</li>
+				<li><strong>background: url('../img/background2.jpg') 0 0/auto 100% no-repeat;</strong> Размеры картинки по
+					высоте блока. см. 3</li>
+				<li><strong>background: url('../img/background2.jpg') 0 0/100% 100% no-repeat;</strong> Расстягиваем картинку на
+					всю ширину и высоту блока. см. 4</li>
+				<li><strong>background: url('../img/background2.jpg') 0 0/contain no-repeat;</strong> Размеры картинки по высоте
+					блока. см. 5</li>
+				<li><strong>background: url('../img/background2.jpg') 0 0/cover no-repeat;</strong> Масштабирует изображение с
+					сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока. То есть по большей
+					стороне картинки см. 6</li>
+				<li><strong>background: url('../img/background2.jpg') 0 0/200px 150px no-repeat;</strong> Устанавливаем
+					конкретные размеры. Если установлено одно значение, оно задает ширину фона, второе значение принимается за
+					auto. Пропорции картинки при этом сохраняются. Использование двух значений через пробел задает ширину и высоту
+					фоновой картинки. см. 7</li>
+			</ul>
+			<div class="bg-color font">
+				<div class="block b-20">1</div>
+				<div class="block b-21">2</div>
+				<div class="block b-22">3</div>
+				<div class="block b-23">4</div>
+				<div class="block b-24">5</div>
+				<div class="block b-25">6</div>
+				<div class="block b-26">7</div>
+			</div>
+			<h2>Установка нескольких фоновых изображений для блока</h2>
+			<p>Свойство background позволяет задать несколько фоновых изображений одному блоку, причем со своими настройками
+				позиционирования масштабирования и прокрутки. Указывать значения следует через запятую.</p>
+			<h2>Вариант написания CSS кода:</h2>
+			<p>background-image: url('img/bg.jpg'),url('img/bg-2.jpg');
+				background-repeat: no-repeat;
+				background-position: left,50%;
+				background-size: auto auto, cover; Ниже универсальный вариант.</p>
+			<ul class="list">
+				<li><strong>background: #183db5 url('../img/js-mini.jpg') no-repeat;</strong>Цвет фона + одна картинка + не
+					повторять. см. 1</li>
+				<li><strong>bbackground: url('../img/js-mini.jpg') left no-repeat, url('../img/background.jpg') 50%/cover
+						no-repeat;</strong>Две картинки, у каждой свои настройки. Каждая следующая ложится под предыдущую. см. 2
+				</li>
+				<li><strong> background: url('../img/mini.jpg') right/50px no-repeat, url('../img/js-mini.jpg') left no-repeat,
+						url('../img/background.jpg') 50%/cover no-repeat;</strong>Три картинки, у каждой свои настройки. Каждая
+					следующая ложится под предыдущую. см. 3</li>
+				<li><strong>background: url('../img/background2.jpg') 0 0/100% 100% no-repeat;</strong> Расстягиваем картинку на
+					всю ширину и высоту блока. см. 4</li>
+				<li><strong> background: url('../img/js-mini.jpg') 0 0/50px no-repeat, url('../img/mini.jpg') 100% 100%/50px
+						no-repeat, url('../img/js-mini.jpg') 50% no-repeat, url('../img/background.jpg') 50%/cover
+						no-repeat;</strong> Четыре картинки, у каждой свои настройки. Каждая следующая ложится под предыдущую. см. 5
+				</li>
+			</ul>
+			<div class="bg-color">
+				<div class="block b-27">1</div>
+				<div class="block b-28">2</div>
+				<div class="block b-29">3</div>
+				<div class="block b-30">4</div>
+			</div>
+			<p>Существуют еще пара свойств таких как background-origin и background-clip, которые отвечают за показ фона
+				вместе с границей border. На эти свойства влияет параметр box-sizing: border-box; в обнуляющем стиле.</p>
+		</main>
+		<footer>
+			<div><a target="blanck" href="https://fls.guru/cssbackground.html">Источник: «Фрилансер по жизни»</a></div>
+			<div> <a target="blanck" href="http://htmlbook.ru/">Источник: htmlbook</a></div>
+			<div> <a href="index2.html">Figma maket</a></div>
+		</footer>
+	</div>
+</body>
+
+</html>
