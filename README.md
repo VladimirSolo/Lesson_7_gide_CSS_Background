@@ -1,1 +1,1 @@
-# Lesson_7_giude_CSS_Background
+# https://vladimirsolo.github.io/Lesson_7_gide_CSS_Background/
